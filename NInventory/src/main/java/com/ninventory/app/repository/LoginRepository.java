@@ -1,11 +1,13 @@
 package com.ninventory.app.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ninventory.app.model.Users;
 
-public interface UserRepository extends JpaRepository<Users, Long> {
+public interface LoginRepository extends JpaRepository<Users, Long> {
 	 
-	   Users findByEmail(String email);
+	   List<Users> findByEmail(String email);
 	 
 }
